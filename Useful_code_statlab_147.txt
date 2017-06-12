@@ -1,0 +1,8 @@
+Дърво на решенията:
+result <- ctree(as.factor(sl$rent) ~., data=sl)
+
+Графика на класираните характеристики:
+ggplot(data = stats, aes(x = Variable, y = Count, fill = Type)) + geom_bar(stat="identity") + guides(fill=guide_legend(reverse=TRUE))
+
+Chi-squarе (Pearson) тест:
+chisq.test(table(sl$rent,sl$nature))
